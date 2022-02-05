@@ -1,6 +1,19 @@
-var time = "00:00";
+let ShowTwelveHourFormat = true;
+const TwelveHourbtn = document
+  .getElementById("format12")
+  .addEventListener("click", () => {
+    ShowTwelveHourFormat = true;
+    document.getElementById("format12").classList.add("green");
+    document.getElementById("format24").classList.remove("green");
+  });
+const TwentyFourHourbtn = document
+  .getElementById("format24")
+  .addEventListener("click", () => {
+    ShowTwelveHourFormat = false;
+    document.getElementById("format24").classList.add("green");
+    document.getElementById("format12").classList.remove("green");
+  });
 function showTime() {
-  "use strict";
   var now = new Date();
   var hours = now.getHours();
   var minutes = now.getMinutes();
@@ -15,14 +28,16 @@ function showTime() {
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
-  time = hours + ":" + minutes + ":" + seconds;
+  if (ShowTwelveHourFormat && hours > 12) {
+    hours = hours - 12;
+    time = hours + ":" + minutes + " PM";
+  } else if (ShowTwelveHourFormat && hours < 12) {
+    time = hours + ":" + minutes + " AM";
+  } else {
+    time = hours + ":" + minutes + ":" + seconds;
+  }
   document.getElementById("clock").textContent = time;
   document.getElementById("d" + day).className = "green";
 }
-window.onload = function () {
-  "use strict";
-  setInterval(showTime, 500);
-};
-function make_me_green(el) {
-  el.classList.add("green");
-}
+
+setInterval(showTime, 500);

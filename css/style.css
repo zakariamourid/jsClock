@@ -8,6 +8,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+button {
+  all: unset;
+}
 body {
   background-color: black;
   color: var(--grey);
@@ -32,9 +35,10 @@ li {
 }
 .clock {
   margin: 0 auto;
+  margin-top: 2rem;
   color: var(--green);
   width: 60%;
-  font-size: 13rem;
+  font-size: 10rem;
   text-align: center;
 }
 .clock-format {
@@ -49,4 +53,7 @@ li {
 }
 .green {
   color: var(--green);
+}
+input {
+  all: unset;
 }
