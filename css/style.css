@@ -1,0 +1,54 @@
+:root {
+  --black: #191919;
+  --green: #00ff97;
+  --grey: #8a8a8a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: var(--grey);
+  font-size: 16px;
+  font-family: "Agency FB", arial;
+}
+.days {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 50%;
+}
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+li {
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.clock {
+  margin: 0 auto;
+  color: var(--green);
+  width: 60%;
+  font-size: 13rem;
+  text-align: center;
+}
+.clock-format {
+  width: 20%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.twenty-four-hour {
+}
+.green {
+  color: var(--green);
+}
