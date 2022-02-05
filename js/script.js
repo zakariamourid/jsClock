@@ -44,10 +44,10 @@ function showTime() {
     time = hours + ":" + minutes;
   }
   document.getElementById("clock").textContent = time;
-  document.getElementById("d" + day).className = "green";
+  document.getElementById(day).className = "green";
   for (let i = 1; i < 8; i++) {
     if (i != day) {
-      document.getElementById("d" + i).className = "hidden-xs";
+      document.getElementById(i).className = "hidden-xs";
     }
   }
 }
