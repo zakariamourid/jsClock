@@ -22,9 +22,7 @@ function showTime() {
 window.onload = function () {
   "use strict";
   setInterval(showTime, 500);
-  
 };
 function make_me_green(el) {
   el.classList.add("green");
-  
-
+}
