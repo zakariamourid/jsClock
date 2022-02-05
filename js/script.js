@@ -36,8 +36,20 @@ function showTime() {
   } else {
     time = hours + ":" + minutes + ":" + seconds;
   }
+  if (
+    window.matchMedia("(max-width: 768px)").matches &&
+    ShowTwelveHourFormat != true
+  ) {
+    /* La largeur minimum de l'affichage est 600 px inclus */
+    time = hours + ":" + minutes;
+  }
   document.getElementById("clock").textContent = time;
   document.getElementById("d" + day).className = "green";
+  for (let i = 1; i < 8; i++) {
+    if (i != day) {
+      document.getElementById("d" + i).className = "hidden-xs";
+    }
+  }
 }
 
 setInterval(showTime, 500);

@@ -8,17 +8,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 button {
   all: unset;
 }
+
 body {
-  background-color: black;
+  background-color: var(--black);
   color: var(--grey);
   font-size: 16px;
   font-family: "Agency FB", arial;
 }
 .days {
   margin: 0 auto;
+
   margin-top: 200px;
   width: 50%;
 }
@@ -56,4 +61,54 @@ li {
 }
 input {
   all: unset;
+}
+@media (max-width: 1199px) {
+  html {
+    font-size: 0.8rem;
+  }
+  .days {
+    width: 60%;
+  }
+  .clock-format {
+    width: 25%;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 0.8rem;
+  }
+  .days {
+    width: 75%;
+  }
+  .clock-format {
+    width: 25%;
+  }
+  .clock {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hidden-xs {
+    display: none;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  li {
+    font-size: 3rem;
+  }
+  .clock-format {
+    flex-direction: column;
+    font-size: 3rem;
+    width: 90%;
+    text-align: end;
+  }
+  .twenty-four-hour {
+    margin-top: 2rem;
+  }
+}
+.days {
+  margin-top: 150px;
 }
