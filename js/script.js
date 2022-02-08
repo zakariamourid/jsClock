@@ -45,7 +45,7 @@ function showTime() {
   }
   document.getElementById("clock").textContent = time;
   document.getElementById(day).className = "green";
-  for (let i = 1; i < 8; i++) {
+  for (let i = 0; i < 7; i++) {
     if (i != day) {
       document.getElementById(i).className = "hidden-xs";
     }
